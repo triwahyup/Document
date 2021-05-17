@@ -1,0 +1,15 @@
+CREATE INDEX transaction_absent_idx ON transaction_absent(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX transaction_check_stock_idx ON transaction_check_stock(distributor_code, sales_id, date, outlet_code) USING BTREE;
+CREATE INDEX transaction_rorder_idx ON transaction_rorder(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX transaction_kompetitor_activity_idx ON transaction_kompetitor_activity(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX transaction_kompetitor_availability_idx ON transaction_kompetitor_availability(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX transaction_kompetitor_market_share_idx ON transaction_kompetitor_market_share(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX transaction_kompetitor_new_activity_idx ON transaction_kompetitor_new_activity(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX stock_dropping_idx ON stock_dropping(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX route_active_sales_idx ON route_active_sales(distributor_code, salesman_id, date) USING BTREE;
+CREATE INDEX cost_salesman_idx ON cost_salesman(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX product_sample_idx ON product_sample(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX retur_product_idx ON retur_product(distributor_code, sales_id, tgl_retur) USING BTREE;
+CREATE INDEX setoran_bank_idx ON setoran_bank(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX ar_bayar_idx ON ar_bayar(distributor_code, sales_id, date) USING BTREE;
+CREATE INDEX ar_tagihan_idx ON ar_tagihan(distributor_code, sales_id, date) USING BTREE;
